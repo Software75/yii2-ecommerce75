@@ -1,0 +1,21 @@
+{
+    "name": "software75/yii2-ecommerce75",
+    "description": "Ecommerce extension for Yii2 projects",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","ecommerce"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "tommaso di cecco",
+            "email": "info@software75.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "software75\\": ""
+        }
+    }
+}
