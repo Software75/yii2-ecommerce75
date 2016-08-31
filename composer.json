@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "software75\\": ""
+            "software75\\yii2-ecommerce75\\": ""
         }
     }
 }
