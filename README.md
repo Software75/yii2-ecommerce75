@@ -21,3 +21,7 @@ or add
 "software75/yii2-ecommerce75": "@dev"
 ```
 to the ```require``` section of your `composer.json` file.
+
+run migration for database
+
+./yii migrate --migrationPath=@software75/yii2-ecommerce75/migrations
