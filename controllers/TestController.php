@@ -1,7 +1,5 @@
-<?php
-namespace software75\ecommerce\controllers;
+namespace software75\yii2-ecommerce75\controllers;
 
-use yii\web\Controller;
 use Yii;
 use yii\filters\AccessControl;
 
@@ -13,6 +11,9 @@ class TestController extends Controller
     public function behaviors()
     {
         return [
+			'behaviorLastActivity' => [
+				'class' => behaviorLastActivity::className(),
+			],
 			'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
@@ -20,6 +21,12 @@ class TestController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -31,8 +38,11 @@ class TestController extends Controller
      */
     public function actionIndex()
     {
+        die('grande!!');
+
         return $this->render('index', [
-            'model' => 'ok',
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 }
