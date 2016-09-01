@@ -1,8 +1,8 @@
 <?php
-namespace software75\yii2-ecommerce75;
+namespace software75\ecommerce;
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'software75\yii2-ecommerce75\controllers';
+    public $controllerNamespace = 'software75\ecommerce\controllers';
 	
     public function init()
     {
